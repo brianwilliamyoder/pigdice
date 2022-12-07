@@ -9,8 +9,16 @@
   <body>
   <div id="form" class="startForm">
     <form id="startGame">
+      <h2>Pig Dice</h2>
+      <h3>Instructions</h3>
+      <p>Players take turns rolling the die</p>
+      <p>Gain points by rolling the die</p>
+      <p>Be careful, if player rolls a 1 they lose their points for the round</p> 
+      <p>Player can "hold" for thier turn to secure thier points</p>
+      <p>First player to 100 points wins!</p>
+      
       <label for="player1Name">Player 1</label>
-      <input type="text" name="player1Name" id="player1Name">
+      <input type="text" name="player1Name" id="player1Name"><br
       <label for="player2Name">Player 2</label>
       <input type="text" name="player2Name" id="player2Name">
       <div id="playButtonDiv">
@@ -21,11 +29,17 @@
     
     <div id="game1" class="hidden">  
       <div class="container">
+        
+        <div class="column">
           <h1>Pig Dice</h1>
+          <h2>Player Turn</h2>
+          <p><span id="indicator"> <- </span></p>
+          
+          </div>
         <div class="row">
           <div class="col-md-4">
             <div class="player1">
-              <h1>Player 1</h1>
+              <h1 id="player1Header">Player 1</h1>
               <p id="player1Total">0</p>
             </div>
           </div>
@@ -37,19 +51,23 @@
           <div class="dice-roll">
             <p id="pDice">0</p>
             <div class="buttons">
-              <button id="roll" type="button" name="roll">Roll</button>
-              <button id="hold" type="button" name="hold">Hold</button>
+              <button id="roll" type="button" name="roll">Roll</button><br>
+              <button id="hold" class="hidde" type="button" name="hold">Hold</button>
             </div>
           </div>
         </div>
         <div class="col-md-4">
           <div class="player2">
-            <h1>Player 2</h1>
+            <h1 id="player2Header">Player 2</h1>
             <p id="player2Total">0</p>
           </div>
         </div>
       </div>
      </div>
+    </div>
+    <div id="winMessage" class="hidden">
+      Congratumalations! <span id="playerName"></span> You've won!
+      <button type="button" id="playAgainButton">Play Again!</button>
     </div>
   </body>
 </html>

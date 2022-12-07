@@ -1,3 +1,6 @@
+#indicator {
+  font-size: 60px;
+}
 .container h1{
   text-align: center;
 }
@@ -7,6 +10,7 @@
 }
 #roll{
 border-radius: 100px;
+
 }
 #pDice {
   background-color: white;
@@ -20,11 +24,13 @@ border-radius: 100px;
   text-align: center;
 }
 .startForm {
-  display: grid;
+  display: flex;
   margin-left: 60vh;
-  margin-right: 20vh;
+  margin-right: 40vh;
   margin-top: 50vh;
+  margin-bottom: 40vh;
   background-color: lightcoral;
+  text-align: center;
   
 }
 #playButtonDiv{
