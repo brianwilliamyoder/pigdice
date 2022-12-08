@@ -58,7 +58,6 @@ function handleDiceRoll() {
     pInt += dice;
     pTotal.innerText = pInt.toString();
     document.getElementById("hold").classList.remove("hidden");
-  
   }
 }
  
