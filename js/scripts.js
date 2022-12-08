@@ -49,6 +49,11 @@ function handleDiceRoll() {
     switchPlayer();
     pTotal.innerText = 0
     document.getElementById("hold").classList.add("hidden");
+    if (game.players[1].name === "computer") {
+      computerStrategy(); 
+    } else {
+      
+    }
   } else { 
     pInt += dice;
     pTotal.innerText = pInt.toString();
@@ -90,6 +95,7 @@ function switchPlayer() {
       game.turn = 0 
      }
 }
+
 function handleReset() {
   location.reload()
 }
@@ -111,10 +117,30 @@ function handleReset() {
 
  }
 
+ function computerPlayer() {
+  player2Input = document.getElementById("player2Name").value = "computer"
+  addPlayers();
+ }
+
+ function computerStrategy(){
+  let computerRoll = document.getElementById("computerRoll");
+  let diceNumber = document.getElementById("pDice").innerText;
+  document.getElementById("roll").click();
+  computerRoll.innerText = "Computer has rolled a :" + diceNumber;
+    if (document.getElementById("pDice").innerText != 1){
+     document.getElementById("roll").click();
+     computerRoll.innerText = "Computer has rolled a :" + diceNumber;
+      if (document.getElementById("pDice").innerText != 1){
+        handleTotal(); }
+    }
+  computerRoll.innerText = null   
+ }
+ 
 
 window.addEventListener("load", function() {
   document.querySelector("form#startGame").addEventListener("submit", addPlayers);
   document.querySelector("button#roll").addEventListener("click", handleDiceRoll);
   document.querySelector("button#hold").addEventListener("click", handleTotal);
   document.querySelector("button#playAgainButton").addEventListener("click", handleReset);
+  // ...................("button#playComputer")...................("click", computerPlayer)
 });

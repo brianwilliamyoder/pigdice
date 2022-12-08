@@ -18,7 +18,7 @@
       <p>First player to 100 points wins!</p>
       
       <label for="player1Name">Player 1</label>
-      <input type="text" name="player1Name" id="player1Name"><br
+      <input type="text" name="player1Name" id="player1Name"><br>
       <label for="player2Name">Player 2</label>
       <input type="text" name="player2Name" id="player2Name">
       <div id="playButtonDiv">
@@ -26,15 +26,12 @@
       </div>
     </form>
   </div>    
-    
     <div id="game1" class="hidden">  
-      <div class="container">
-        
+      <div class="container">        
         <div class="column">
           <h1>Pig Dice</h1>
           <h2>Player Turn</h2>
-          <p><span id="indicator"> <- </span></p>
-          
+          <p><span id="indicator"> <- </span></p>          
           </div>
         <div class="row">
           <div class="col-md-4">
@@ -48,14 +45,18 @@
             <div class="roundTotal">
             <p id="roundTotalP">0</p>
           </div>
-          <div class="dice-roll">
-            <p id="pDice">0</p>
-            <div class="buttons">
-              <button id="roll" type="button" name="roll">Roll</button><br>
-              <button id="hold" class="hidde" type="button" name="hold">Hold</button>
+            <div class="dice-roll">
+              <h3>Dice Roll</h3>
+              <p id="pDice">0</p>
+                <div class="buttons">
+                  <button id="roll" type="button" name="roll">Roll</button><br>
+                  <button id="hold" class="hidde" type="button" name="hold">Hold</button>
+                    <div id="computerLog">
+                      <p><span id="computerRoll"></span></p>
+                    </div>  
+                </div>
             </div>
           </div>
-        </div>
         <div class="col-md-4">
           <div class="player2">
             <h1 id="player2Header">Player 2</h1>

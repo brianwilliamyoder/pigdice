@@ -62,6 +62,12 @@ code: storeRoundTotal()
 expected output: roundTotal = a number between 1 and 6
 
 
+#####
+Computer Easy Mode:
+-stops rolling after two turns if not 1
+
+
+
 
 Game {player:0}
 > player: 0
